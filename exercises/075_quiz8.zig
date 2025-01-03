@@ -37,8 +37,7 @@ const Path = struct {
 // Okay, so as you may recall, we had to create each Path struct
 // by hand and each one took 5 lines of code to define:
 //
-//    Path{
-//        .from = &a, // from: Archer's Point
+//    Path{ .from = &a, // from: Archer's Point
 //        .to = &b,   //   to: Bridge
 //        .dist = 2,
 //    },
@@ -49,7 +48,11 @@ const Path = struct {
 //
 // Please fill in the body of this function!
 fn makePath(from: *Place, to: *Place, dist: u8) Path {
-
+    return Path{
+        .from = from,
+        .to = to,
+        .dist = dist,
+    };
 }
 
 // Using our new function, these path definitions take up considerably less

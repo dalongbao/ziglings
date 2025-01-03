@@ -1,8 +1,6 @@
 //
 // "Compile time" is a program's environment while it is being
-// compiled. In contrast, "run time" is the environment while the
-// compiled program is executing (traditionally as machine code
-// on a hardware CPU).
+// compiled. In contrast, "run time" is the environment while the compiled program is executing (traditionally as machine code on a hardware CPU).
 //
 // Errors make an easy example:
 //
@@ -62,8 +60,8 @@ pub fn main() void {
     // types with specific sizes. The comptime numbers will be
     // coerced (if they'll fit!) into your chosen runtime types.
     // For this it is necessary to specify a size, e.g. 32 bit.
-    var var_int = 12345;
-    var var_float = 987.654;
+    var var_int: u32 = 12345;
+    var var_float: f32 = 987.654;
 
     // We can change what is stored at the areas set aside for
     // "var_int" and "var_float" in the running compiled program.

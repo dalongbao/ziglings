@@ -16,12 +16,14 @@ pub fn main() void {
     // Take a good look at the array type to which we're coercing
     // the zen12 string (the REAL nature of strings will be
     // revealed when we've learned some additional features):
+    // a pointer to an array of u8s
     const zen12: *const [21]u8 = "Memory is a resource.";
     //
     //   It would also have been valid to coerce to a slice:
     //         const zen12: []const u8 = "...";
     //
     // Now let's turn this into a "many-item pointer":
+    // an array of pointers to u8s
     const zen_manyptr: [*]const u8 = zen12;
 
     // It's okay to access zen_manyptr just like an array or slice as
@@ -33,7 +35,9 @@ pub fn main() void {
     // we can CONVERT IT TO A SLICE. (Hint: we do know the length!)
     //
     // Please fix this line so the print statement below can print it:
-    const zen12_string: []const u8 = zen_manyptr;
+    // this needs to be reversing that operation of the multi-array pointer into a single pointer?
+    // you do that by making it a known size and taking the slice
+    const zen12_string: []const u8 = zen_manyptr[0..21];
 
     // Here's the moment of truth!
     std.debug.print("{s}\n", .{zen12_string});
