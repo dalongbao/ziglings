@@ -1,7 +1,7 @@
 # Zigling solutions
 Completed Ziglings! 
 
-==========================================================================================================
+==============================================================
 # Ziglings
 
 Welcome to Ziglings! This project contains a series of tiny
